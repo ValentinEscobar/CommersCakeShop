@@ -1,16 +1,17 @@
 import React from 'react'
-import NavBar from './NavBar'
-import { CartWidget } from './CartWidget'
-import { ItemListContainer } from '../ItemListContainer'
+// Importe del Componente Navbar
+import NavBar from './components/Navbar'
+//Importe de ItemListContainer
+import ItemListContainer from './components/ItemListContainer'
+
+
 
 
 const App = () => {
   return (
     <div>
-      App
-      <NavBar/>
-      <CartWidget/>
-      <ItemListContainer/>
+      <NavBar />
+      <ItemListContainer greeting={"Bienvenido a Reposteria Escoba"}/>
     </div>
   ) 
 }
