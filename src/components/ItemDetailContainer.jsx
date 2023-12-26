@@ -1,14 +1,15 @@
 import React from 'react'
+//Importe de ItemDetail
+import ItemDetail from './ItemDetail.jsx'
 //Importe de componentes de la libreria de Chakra
 import { Center } from '@chakra-ui/react'
-//Importe de ItemList
-import ItemList from './ItemList.jsx'
 //Importe de hook de react router 
 import { useParams } from 'react-router-dom'
 
-const ItemListContainer = () => {
 
-  const {categoryId} = useParams ()
+const ItemDetailContainer = () => {
+
+  const {id} = useParams()
 
   const productos = [
     {id: 1, categoria: "asadera", titulo:"Asadera Grande", descripcion:"Asadera Rectangular para tortas cuadradas de 30cm x 40cm", precio: 100},
@@ -20,9 +21,8 @@ const ItemListContainer = () => {
     {id: 7, categoria: "cajas", titulo:"Caja blanca Cuadrada", descripcion:"Caja Blanca para tortas y tartas cuadradas 30cm(A) x 30cm(L) x 15cm(H)", precio: 700}
   ]
 
-  //verificacion de si productos contiene elementos
   const mostrarProductos = new Promise((resolve, reject) => {
-    //si productos tiene elemenos mostar los productos con una demora de 3 segundos
+
     if (productos.lenght > 0) {
       setTimeout(() => {
         resolve(productos)
@@ -40,15 +40,13 @@ const ItemListContainer = () => {
       console.log(error)
     })
 
-  const productosFiltrados = productos.filter((productos) => productos.categoria == categoryId)
+    const productoFlitrado = productos.find((producto) => producto.id == id )
 
   return (
     <div>
-      {
-        categoryId ? <ItemList productos ={productosFiltrados}/> : <ItemList productos ={productos}/>
-      }
+      <ItemDetail producto={productoFlitrado}/>
     </div>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

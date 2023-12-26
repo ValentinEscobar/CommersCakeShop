@@ -1,5 +1,7 @@
 import React from 'react'
+//Importe de componentes de Libreria React Icons
 import { AiOutlineShoppingCart } from "react-icons/ai"
+//Importe de componentes de la libreria de Chakra
 import { Flex, Box, Spacer, } from '@chakra-ui/react'
 
 const CartWidget = () => {
