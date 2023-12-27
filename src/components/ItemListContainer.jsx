@@ -1,6 +1,4 @@
 import React from 'react'
-//Importe de componentes de la libreria de Chakra
-import { Center } from '@chakra-ui/react'
 //Importe de ItemList
 import ItemList from './ItemList.jsx'
 //Importe de hook de react router 
@@ -8,8 +6,10 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
 
+  //hook para leer parametro de la ruta y poder utilizar CategoryId
   const {categoryId} = useParams ()
 
+  //array de productos
   const productos = [
     {id: 1, categoria: "asadera", titulo:"Asadera Grande", descripcion:"Asadera Rectangular para tortas cuadradas de 30cm x 40cm", precio: 100},
     {id: 2, categoria: "asadera", titulo:"Asadera pequeña", descripcion:"Asadera Rectangular para tortas cuadradas de 20cm x 30cm", precio: 200},
@@ -40,8 +40,10 @@ const ItemListContainer = () => {
       console.log(error)
     })
 
+    //filtrado de productos segun la categoria deseada
   const productosFiltrados = productos.filter((productos) => productos.categoria == categoryId)
 
+  //ternario que comprueba si se a seleccionado alguna categoria para mostrarlo. si ninguna categoria esta seleccionada muestra todos los productos de mi array
   return (
     <div>
       {

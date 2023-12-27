@@ -1,5 +1,14 @@
 # React + Vite
 
+## Proyecto de React de Ecommerce
+
+### Alumno: Valentin Escobar
+
+[Perfil de Linkedin](https://www.linkedin.com/in/valentin-escobar-6934b9268/)
+
+
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

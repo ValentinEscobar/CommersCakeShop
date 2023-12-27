@@ -13,6 +13,7 @@ import ItemDetailContainer from './components/ItemDetailContainer.jsx'
 
 
 const App = () => {
+  //todas las rutas de mi aplicacion web y el llamado para mostrar el respectivo componente 
   return (
     <BrowserRouter>
       <NavBar />

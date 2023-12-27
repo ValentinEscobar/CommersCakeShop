@@ -1,16 +1,16 @@
 import React from 'react'
 //Importe de ItemDetail
 import ItemDetail from './ItemDetail.jsx'
-//Importe de componentes de la libreria de Chakra
-import { Center } from '@chakra-ui/react'
 //Importe de hook de react router 
 import { useParams } from 'react-router-dom'
 
 
 const ItemDetailContainer = () => {
 
+  //hook para leer parametro de la ruta y poder utilizar id
   const {id} = useParams()
 
+  //array de productos
   const productos = [
     {id: 1, categoria: "asadera", titulo:"Asadera Grande", descripcion:"Asadera Rectangular para tortas cuadradas de 30cm x 40cm", precio: 100},
     {id: 2, categoria: "asadera", titulo:"Asadera pequeña", descripcion:"Asadera Rectangular para tortas cuadradas de 20cm x 30cm", precio: 200},
@@ -40,8 +40,11 @@ const ItemDetailContainer = () => {
       console.log(error)
     })
 
+
+    //funcion que busca el producto seleccionado en la ruta
     const productoFlitrado = productos.find((producto) => producto.id == id )
 
+    //return de de la card detallada del producto seleccionando
   return (
     <div>
       <ItemDetail producto={productoFlitrado}/>

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 const Item = ({titulo, id}) => {
+    //card para cada producto con su titulo y un boton para ver mas detalles del producto
   return (
     <Card maxW='sm'>
         <CardBody>

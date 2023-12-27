@@ -3,6 +3,8 @@ import React from 'react'
 import Item from './Item'
 
 const ItemList = ({productos}) => {
+  
+  //map que recorre y muestra una card con su contenido por cada item que tenga en el array de productos
   return (
     <div>
       {
