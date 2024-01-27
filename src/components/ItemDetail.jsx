@@ -4,7 +4,7 @@ import {Card, CardBody, Stack, Heading, Text, Divider, CardFooter, ButtonGroup }
 //Importe de ItemCount
 import ItemCount from './ItemCount'
 
-const ItemDetail = ({producto}) => {
+const ItemDetail = ({titulo, descripcion, precio}) => {
 
     return (
     //Card de chakra para mostrar los datos de cada producto (Titulo, Descripcion y Precio) y el ItemCount
@@ -12,13 +12,13 @@ const ItemDetail = ({producto}) => {
         <CardBody>
             <Stack mt='6' spacing='3'>
                 <Heading size='md'>
-                    {producto.titulo}
+                    {titulo}
                 </Heading>
                 <Text>
-                    {producto.descripcion}
+                    {descripcion}
                 </Text>
                 <Text color='blue.600' fontSize='2xl'>
-                    ${producto.precio}
+                    ${precio}
                 </Text>
             </Stack>
         </CardBody>

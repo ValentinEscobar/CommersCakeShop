@@ -1,8 +1,10 @@
 # React + Vite
 
-## Proyecto de React de Ecommerce
+## Proyecto con React de Ecommerce
 
 ### Alumno: Valentin Escobar
+
+**Este proyecto es un ecommers de una pasteleria que busca tener toda la funcionalidad basica necesaria de un emprendimiento de pequeña escala**
 
 **_A continuacion se encuentra un GIF con la navegavilidad de mi pagina web:_**
 
